@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Co-Teacher</title>
+    <link rel="stylesheet" href="stylesg2.css">
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="section hero" style="background-image: url('hero.jpg');">
+    <div class="container">
+        <h1>Building Your Dream Math Co-Teacher</h1>
+        <p>The path to math success for all students, from an app.</p>
+        <button onclick="scrollToSection('what-section')">What Co-Teacher Does</button>
+    </div>
+</div>
+
+<!-- What It Does Section -->
+<div class="section what" id="what-section" style="background-image: url('chalkboard.jpg');">
+    <div class="container">
+        <h1>An expert K-6 math teacher that can:</h1>
+        <ul>
+            <li>Interviews your students to assess how they are reasoning.</li>
+            <li>Assess students at risk of falling behind in multiplicative reasoning.</li>
+            <li>Be their 1:1 tutor, meeting each student where they are.</li>
+        </ul>
+        <button onclick="scrollToSection('challenge-section')">Challenges</button>
+    </div>
+</div>
+
+<!-- Challenge Section -->
+<div class="section challenge" id="challenge-section" style="background-color: #f5f5f5;">
+    <div class="container">
+        <h1>The Linchpin</h1>
+        <p>Your district has a good curriculum, but students still struggle in math.</p>
+        <img src="three.jpg" alt="3 out of 4 American 8th Graders Are Not Proficient In Math">
+        <h2>Why does this happen?</h2>
+        <p>In the progression of mathematical learning, making the leap from additive thinking to multiplicative reasoning is the linchpin to success in mathematics.</p>
+        <button onclick="scrollToSection('teach-section')">Teaching Approach</button>
+    </div>
+</div>
+
+<!-- Teach Section -->
+<div class="section teach" id="teach-section" style="background-image: url('hero.jpg');">
+    <div class="container">
+        <h1>It doesn't have to be this way.</h1>
+        <p>As a classroom teacher, I learned how to help students make the leap to multiplicative reasoning.</p>
+        <button onclick="scrollToSection('testimonials')">Testimonials</button>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="section testimonials" id="testimonials">
+    <div class="container">
+        <h1>Hear From Teachers and Parents Who Have Benefited From This Approach</h1>
+        <div class="testimonial-item">
+            <p>"This framework opened the door for me to learn more math content and to deepen my understanding of how students learn it. I’m more confident and a better teacher because of it."</p>
+            <h3>- Cindy, 3rd grade teacher</h3>
+        </div>
+        <!-- Add more testimonials as needed -->
+        <button onclick="scrollToSection('contact')">Contact Us</button>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="section contact" id="contact">
+    <div class="container">
+        <h1>Math Co-Teacher is being built by teachers, for teachers.</h1>
+        <p>Want to partner with us as we design, test, and build this software? Get in touch!</p>
+        <p><a href="mailto:mark@mathcoteacher.com">Contact Us</a></p>
+    </div>
+</div>
+
+<script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
