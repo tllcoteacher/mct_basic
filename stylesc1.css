@@ -37,11 +37,92 @@
     z-index: 1000;
   }
   
-  nav ul {
-    list-style: none;
+/* Navigation */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    justify-content: space-around;
-    padding: 20px 0; 
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .menu li {
+    margin-left: 20px;
+  }
+  
+  .menu-btn, .menu-icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background: #fff;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .menu li {
+      margin: 15px 0;
+    }
+  
+    .menu-icon {
+      display: inline-block;
+      cursor: pointer;
+    }
+  
+    .navicon {
+      background: #333;
+      display: block;
+      height: 2px;
+      position: relative;
+      width: 18px;
+    }
+  
+    .navicon:before, .navicon:after {
+      background: #333;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+  
+    .navicon:before {
+      top: 5px;
+    }
+  
+    .navicon:after {
+      top: -5px;
+    }
+  
+    .menu-btn {
+      display: none;
+    }
+  
+    .menu-btn:checked ~ .menu {
+      display: block;
+    }
   }
   
   nav a {
