@@ -20,7 +20,24 @@ body, html {
   max-width: 100%; /* Ensure images are not larger than their containers */
 }
 
-.hero, .what, .challenge, .teach {
+.hero {
+  background-image: url('hero.jpg'); /* Check this path */
+  background-size: cover;
+  background-position: center;
+}
+
+.what {
+  background-image: url('chalkboard.jpg'); /* Check this path */
+  background-size: cover;
+  background-position: center;
+}
+
+.challenge {
+  background-color: #f5f5f5; /* If no image, use a fallback color */
+}
+
+.teach {
+  background-image: url('hero.jpg'); /* Reuse hero image, check path */
   background-size: cover;
   background-position: center;
 }
