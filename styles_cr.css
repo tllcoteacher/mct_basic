@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+  }
+  
+  .section {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .progression-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hero { 
+    background-image: url('hero.jpg');
+    background-size: cover;
+  }
+  
+  .what { 
+    background-image: url('chalkboard.jpg');
+    background-size: cover;
+  }
+  
+  .challenge { 
+    background-color: #f5f5f5;
+    padding-bottom: 40px;
+  }
