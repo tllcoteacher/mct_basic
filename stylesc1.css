@@ -138,7 +138,7 @@
   
   /* Hero section */
   .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero.jpg') center/cover no-repeat;
+    background: url('hero.jpg') center/cover no-repeat;
     color: #fff;
     text-align: center; 
     display: flex;
