@@ -203,7 +203,7 @@
   
   /* Testimonials section */
   .testimonials {
-    background-color: #f4f4f4; /* Light grey background */
+    background-color: #f4f4f4 !important; /* Forces this style to take precedence */
     text-align: center;  
   }
   
