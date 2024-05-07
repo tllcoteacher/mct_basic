@@ -199,12 +199,6 @@
     display: block;
   }
   
-  /* Solution section */
-  .solution {
-    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('solution.jpg') center/cover no-repeat;
-    color: #fff;
-  }
-  
   /* Testimonials section */
   .testimonials {
     background-color: #f4f4f4 !important; /* Forces this style to take precedence */
@@ -225,6 +219,21 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
+    /* About section */
+    .about {
+      background: url('hero.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+    }
+    
+    .about-content {
+      max-width: 800px;
+    }
+
   /* Contact section */
   .contact {
     text-align: center;
