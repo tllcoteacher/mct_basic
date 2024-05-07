@@ -183,12 +183,16 @@
     margin-bottom: 10px;
   }
   
-  /* Challenges section */  
-  .challenge {
+  /* Demo section */  
+  .demo {
     background: #f4f4f4;
     text-align: center;
   }
-  
+  .demo > div {
+    max-width: 960px; /* or whatever maximum width you prefer */
+    margin: auto; /* This centers the div in its container */
+}
+
   .challenge-image {
     max-width: 200px;
     margin: 20px auto;
@@ -243,7 +247,7 @@
     max-width: 600px;
     margin: 0 auto;
   }
-  
+
   /* Footer */
   footer {
     background: #333;
