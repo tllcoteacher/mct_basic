@@ -238,6 +238,12 @@
     color: #0056b3;
   }
   
+  .form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
   /* Footer */
   footer {
     background: #333;
