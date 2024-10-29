@@ -1,119 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Math Co-Teacher</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math CoTeacher</title>
+    <style>
+	body { 
+	  line-height: 1.4;
+	    font-size: 16px;
+	    padding: 0 10px;
+	    margin: 50px auto;
+	    max-width: 650px;
+	}
+
+	#maincontent
+	{
+	max-width:42em;margin:15 auto;
+	}
+    .note {
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        .no-underline:link, .no-underline:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.no-underline:hover, .no-underline:focus {
+    text-decoration: none;
+}
+.members-list {
+    margin-top: 0;
+}
+h3 {
+    margin-bottom: 4px;
+}
+
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-        <div class="nav-container">
-          <a href="#" class="logo">Math Co-Teacher</a>
-          <input class="menu-btn" type="checkbox" id="menu-btn" />
-          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-          <ul class="menu">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#demo">Demo</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-  </header>
+<div id="maincontent" style="margin-top:70px">
+        <h1 class="main-heading">Math CoTeacher </h1>
+        <p>
+            Built for teachers, by a teacher, alongside teachers in their classroom.
+            </p>
+         <p> 
+            The initial focus is on elementary school mathematics and building a rock solid foundation.
+            </p>
+        
+        <h3>Who am I? </h3>
+        <p> I am Mark Pettyjohn.</p>
+        <p>I've taught 4th grade, 6th grade, pre-k, and kindergarten. </p>
+            <p>The work my students did in our 4th grade classroom garnered me a math teacher of the year award, horribly unfair for my students, I know. Don't feel too bad though as they earned themselves representation in chatper 11 of Tracy Zager's book <a href="https://www.routledge.com/Becoming-the-Math-Teacher-You-Wish-Youd-Had-Ideas-and-Strategies-from-Vibrant-Classrooms/JohnstonZager/p/book/9781571109965" class="no-underline">Becoming the Math Teacher You Wish You Had</a> showing their chops about how 4th grade mathematicans prove their conjectures.</p>
+            <p>I want to see a mathematically literate world. Math CoTeacher is a way I see to help students and their teachers get us there.</p>
 
-  <main>
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <h1>Building Your Dream Math Co-Teacher</h1>
-        <h3>The path to math success for all students, from an app.</h3>
-        <a href="#features" class="button">Learn More</a>
-      </div>
-    </section>
-
-    <section id="features" class="features">
-      <h2>Co-Teacher will be your K-6 math expert that can:</h2>
-      <div class="feature-grid">
-        <div class="feature-item">
-          <h3>Interview</h3>
-          <p>Your students to see if they are at risk of becoming one of the 3 out of 4 U.S. 8th graders who are not proficient in math.</p>
-        </div>
-        <div class="feature-item">  
-          <h3>Instruct</h3>
-            <p>1:1 tailored tutoring to put your students on track for long-term math success.</p>
-        </div>
-        <div class="feature-item">  
-            <h3>Inform</h3>
-              <p>Make your every day instruction more accessible and effective with insight from Co-Teacher.</p>
-          </div>
-      </div>
-    </section>
-
-    <section id="demo" class="demo">
-      <h3>Click the video belowto see a snippet of Co-Teacher in action:</h3>
-      <div style="padding:56.25% 0 0 0; position:relative;">
-          <iframe src="https://player.vimeo.com/video/943795467?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="mct"></iframe>
-      </div>
-      <script src="https://player.vimeo.com/api/player.js"></script>
-  </section>
-
-
-    <section id="testimonials" class="testimonials">
-      <h2>What Teachers and Parents Are Saying</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial-item">
-          <p>"This framework opened the door for me to learn more math content and to deepen my understanding of how students learn it. I'm more confident and a better teacher because of it."</p>
-          <p>Cindy, 3rd grade teacher</p>
-        </div>
-        <div class="testimonial-item">
-          <p>"My wife and I aren't 'math people' but our son is. We credit so much of that to him building a strong foundation."</p>
-          <p>James, parent</p>
-        </div>
-        <div class="testimonial-item">
-          <p>"This is the missing piece."</p>
-          <p>Nina, 4th grade teacher</p>
-        </div>
-        <div class="testimonial-item">  
-          <p>"No more math fights or frustration! This framework uncovered my daughter's reasoning abilities, helped her quickly get back on track, and ended the nightly homework battles."</p>
-          <p>Ann, parent</p>
-        </div>
-      </div>
-    </section>
-     
-    <section id="about" class="about">
-      <div class="about-content">
-        <p>I'm Mark Pettyjohn and I'm building the Co-Teacher I wanted as an elementary and middle school math teacher.</p>
-        <p>Over the past 15 years I learned the power of student interviews.</p>
-        <p>I learned what questions and follow-ups to ask students to see and understand their reasoning.</p>
-        <p>I learned what responses to anticipate and what those meant about a student's development.</p>
-        <p>I learned how to use this insight to help students move ever upwards.</p>
-        <p>I'm building Co-Teacher to capture this expertise in an app.</p>
-        <p>Want to join several other schools as design partners?</p>  
-        <a href="#contact" class="button">Join Me</a>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <h3>Become a design partner</h3>
-      <h4>Two ways to get in touch:</h4>
-      <h4>1. Fill out the form below</h4>
-      <h4>2. Click this email address to copy it to your devices clipboard, then shoot me an email me! </h4>
-      <h4><a href="#" class="email-link" data-email="mark@mathcoteacher.com">mark@mathcoteacher.com</a></h4>
-      <p></p>
-      <div class="form-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd4aMwpnuIrhVeUh8W1AmGy1tamXbjbKF8uCFfWZEe3Ubb7rw/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Math Co-Teacher. All rights reserved.</p>
-  </footer>
-
+        <h4>Want to work with me?</h4>
+        <p>If you might like to be a part of this build, get in touch! <a href="mailto:mark@mathcoteacher.com” class="email-link">mark@mathcoteacher.com</a></p>
+    </div>
 </body>
 </html>
