@@ -1,577 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Math CoTeacher - The Future of Learning</title>
-  <style>
-    :root {
-      --page-bg: #f5f6fa;
-      --card-bg: #ffffff;
-      --text-color: #1f1f24;
-      --muted-text: #586174;
-      --accent: #1f7aec;
-      --border-color: #d9deea;
-      --shadow: 0 12px 30px rgba(18, 38, 63, 0.08);
-      --radius-lg: 18px;
-      --radius-sm: 10px;
-      --max-width: 940px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0 1.2rem 3rem;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--page-bg);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    .page {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding-top: 2.8rem;
-    }
-
-    .page-header h1 {
-      margin: 0 0 0.5rem;
-      font-size: clamp(2rem, 5vw, 2.75rem);
-      letter-spacing: -0.02em;
-    }
-
-    .page-header p {
-      margin: 0;
-      color: var(--muted-text);
-      font-size: 1.05rem;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      padding: 2rem 1.6rem;
-      margin-top: 2rem;
-    }
-
-    @media (min-width: 640px) {
-      .card {
-        padding: 2.4rem 2.8rem;
-      }
-    }
-
-    .card-header {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: baseline;
-      margin-bottom: 1rem;
-    }
-
-    .card-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      font-weight: 700;
-      color: var(--accent);
-      background: rgba(31, 122, 236, 0.12);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .card-header h2 {
-      margin: 0;
-      font-size: clamp(1.4rem, 3.6vw, 1.9rem);
-      letter-spacing: -0.01em;
-    }
-
-    .lead {
-      font-size: 1.1rem;
-      margin: 0 0 1.2rem;
-    }
-
-    .key-points {
-      margin: 0 0 1.6rem;
-      padding-left: 1.2rem;
-    }
-
-    .key-points li {
-      margin-bottom: 0.4rem;
-    }
-
-    details {
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-sm);
-      padding: 0.9rem 1rem;
-      background: #fbfcff;
-      margin-top: 1rem;
-    }
-
-    details summary {
-      list-style: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 600;
-      color: var(--accent);
-      outline: none;
-    }
-
-    details summary::marker,
-    details summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details summary::before {
-      content: '>';
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 1rem;
-      height: 1rem;
-      font-weight: 700;
-      transform: rotate(0deg);
-      transition: transform 0.25s ease;
-      color: var(--accent);
-    }
-
-    details[open] summary::before {
-      transform: rotate(90deg);
-    }
-
-    details:focus-within {
-      box-shadow: 0 0 0 3px rgba(31, 122, 236, 0.15);
-    }
-
-    details + details {
-      margin-top: 0.9rem;
-    }
-
-    .details-content {
-      margin-top: 0.8rem;
-      color: var(--text-color);
-    }
-
-    .details-content p {
-      margin: 0 0 1rem;
-    }
-
-    .details-content ul,
-    .details-content ol {
-      margin: 0 0 1.2rem 1.2rem;
-      padding-left: 0.2rem;
-    }
-
-    .details-content li {
-      margin-bottom: 0.55rem;
-    }
-
-    .callout {
-      background: #f2f6ff;
-      border-left: 4px solid var(--accent);
-      padding: 0.8rem 1rem;
-      border-radius: var(--radius-sm);
-      color: var(--muted-text);
-      font-size: 0.95rem;
-    }
-
-    .subheading {
-      font-weight: 700;
-      margin: 1.4rem 0 0.6rem;
-    }
-
-    .two-column {
-      display: grid;
-      gap: 1rem;
-    }
-
-    @media (min-width: 880px) {
-      .two-column {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    a.inline-link {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(31, 122, 236, 0.3);
-    }
-
-    a.inline-link:hover {
-      border-bottom-color: var(--accent);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title from source file -->
+    <title>Math CoTeacher - The Future of Learning</title>
+    
+    <!-- Stylesheets and Fonts from template file -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+        }
+        
+        /* Blinking cursor animation */
+        .cursor {
+            display: inline-block;
+            width: 0.75em;
+            height: 1.5em;
+            background-color: #9CA3AF;
+            animation: blink 1s steps(1) infinite;
+            vertical-align: bottom;
+            margin-left: 0.25em;
+        }
+        @keyframes blink {
+            50% {
+                background-color: transparent;
+            }
+        }
+        
+        /* Style for the "links" */
+        .command-link {
+            color: #60A5FA; /* blue-400 */
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .command-link:hover {
+            background-color: #60A5FA;
+            color: #111827; /* gray-900 */
+        }
+        
+        /* Custom styles for the imported content */
+        .terminal-content p { 
+            margin-bottom: 1rem; 
+        }
+        .terminal-content ul, 
+        .terminal-content ol { 
+            padding-left: 0.5rem; 
+            margin-bottom: 1rem; 
+        }
+        .terminal-content li { 
+            margin-bottom: 0.5rem; 
+            margin-left: 1rem;
+        }
+        .terminal-content ul { 
+            list-style-type: none; 
+        }
+        .terminal-content ul li::before { 
+            content: '- '; 
+            color: #60A5FA; /* blue-400 */
+            display: inline-block;
+            width: 1rem;
+            margin-left: -1rem;
+        }
+        .terminal-content ol { 
+            list-style-type: decimal; 
+            list-style-position: inside;
+        }
+        .terminal-content h3, 
+        .terminal-content h4 { 
+            font-weight: 600; 
+            color: #FBBF24; /* amber-400 */ 
+            margin-top: 1.5rem; 
+            margin-bottom: 0.75rem; 
+            font-size: 1.25rem; 
+        }
+        .terminal-content .callout { 
+            background: #374151; /* gray-700 */ 
+            border-left: 4px solid #60A5FA; /* blue-400 */ 
+            padding: 0.75rem 1rem; 
+            border-radius: 0.25rem; 
+            color: #D1D5DB; /* gray-300 */ 
+            font-style: italic; 
+            margin: 1rem 0;
+        }
+    </style>
+    
+    <!-- JavaScript to toggle detail sections -->
+    <script>
+        function toggleDetail(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.toggle('hidden');
+            }
+        }
+    </script>
 </head>
-<body>
-  <main class="page">
-    <header class="page-header">
-      <h1>Math CoTeacher - The Future of Learning</h1>
-      <p>Architecting a cognitive teacher that can learn any domain, diagnose understanding, and guide the next leap in human reasoning.</p>
-    </header>
+<body class="bg-gray-900 text-gray-300 min-h-screen antialiased p-4 sm:p-8">
 
-    <section class="card" id="vision">
-      <div class="card-header">
-        <span class="card-number">1</span>
-        <h2>The Vision: A Universal Teacher</h2>
-      </div>
-      <p class="lead">We are building a cognitive teacher that can learn and teach anything.</p>
-      <ul class="key-points">
-        <li>Now: build an expert math co-teacher.</li>
-        <li>Next: build an expert reading teacher.</li>
-        <li>Future: build a universal teacher.</li>
-      </ul>
-      <details>
-        <summary>Detail</summary>
-        <div class="details-content">
-          <p>The long-term goal is an AI system that does what expert teachers do across domains: understand how understanding develops, locate a learner along that path, and design the next step to move them forward.</p>
-          <p>Great teachers rely on an internal map of how thinking grows. Today these maps are implicit, scattered across research, or stored in a handful of experts' heads. We are turning that wisdom into an engine that can build, refine, and use cognitive frameworks so every learner gets world-class, individualized teaching.</p>
-        </div>
-      </details>
-      <details>
-        <summary>More Detail</summary>
-        <div class="details-content">
-          <p>Expert teaching is not just content knowledge plus clear explanation. It requires an internal, dynamic model of learning. In any domain, master teachers can answer questions like:</p>
-          <ul>
-            <li>What stages do students typically move through as they advance from novice to fluent?</li>
-            <li>Which misconceptions are productive stepping stones and which derail progress?</li>
-            <li>What is the smallest next move that will nudge this specific learner forward?</li>
-          </ul>
-          <p>In math, frameworks like Battista's Cognitively Based Assessment (CBA) and Clements and Sarama's Learning Trajectories make that internal model explicit: learning is a trajectory, not a checklist. Similar trajectories exist in reading, writing, scientific reasoning, design, and music, but they are rarely operationalized.</p>
-          <p>The vision is an AI cognitive teacher that can represent developmental maps explicitly, infer where a learner sits based on their reasoning, choose actions known to move them, and use resulting data to refine both the map and the teaching policy. Math is the first proving ground. Once the loop of framework &lt;-&gt; data &lt;-&gt; AI decisions &lt;-&gt; learning outcomes works, we have a method for teaching anything, not just another subject chatbot.</p>
-        </div>
-      </details>
-    </section>
-
-    <section class="card" id="problem">
-      <div class="card-header">
-        <span class="card-number">2</span>
-        <h2>The Problem: Sixty Years, No Progress</h2>
-      </div>
-      <p class="lead">We have been running in place for six decades. Most students sit below proficiency, adult numeracy is weak, gaps remain stubborn, and families often have no idea how dire things are.</p>
-      <p>We keep rearranging deck chairs on a sinking ship. It does not have to stay this way. If you consider yourself a math person, try the exercise linked in the source doc; notice the frustration. That is the daily experience of most Americans.</p>
-      <details>
-        <summary>Detail</summary>
-        <div class="details-content">
-          <p>Long-term assessments like NAEP and international benchmarks like TIMSS all tell the same story:</p>
-          <ul>
-            <li>Math achievement in the United States has barely moved in decades.</li>
-            <li>Oscillations exist&mdash;small gains, pandemic dips&mdash;but the long-term trend is flat.</li>
-            <li>Adult skills mirror this: many adults struggle with multi-step quantitative reasoning in everyday life.</li>
-          </ul>
-          <p>At the same time, research has advanced. We know more about learning trajectories, early math predictors, and the tight numeracy-literacy connection. Billions have poured into reforms, materials, and interventions. Meta-analyses stack up. And still the charts stay flat.</p>
-          <p class="callout">[Insert NAEP chart here if the asset already exists in the project.]</p>
-          <p>Most parents believe their children are fine. Grades often inflate or fail to align with external benchmarks, so families and educators operate on different maps. Students can collect As and Bs while building shaky math foundations. That was my story too.</p>
-        </div>
-      </details>
-      <details>
-        <summary>More Detail</summary>
-        <div class="details-content">
-          <h3 class="subheading">1. The long-term picture</h3>
-          <ul>
-            <li>NAEP Long-Term Trend scores for 13-year-olds have hovered in the same band for roughly 50 years. Modest gains in the early 2000s have now slid back toward 1970s levels.</li>
-            <li>NAEP's proficient bar is not an honor roll label; it signals solid, grade-level mastery. Yet only about a quarter of eighth graders reach proficient or above in math. Reading is not much better.</li>
-            <li>Internationally, the United States sits in the middle of the pack on TIMSS and PISA, despite outspending many peers.</li>
-            <li>Adult assessments such as PIAAC echo the pattern: simple one-step tasks are manageable, but multi-step reasoning and applied numeracy cause steep drop-offs.</li>
-          </ul>
-          <p>These trends span generations. We reap what we sow. Even as trillion becomes casual in public discourse, we tolerate mathematical illiteracy. It does not have to stay this way.</p>
-          <h3 class="subheading">2. Hidden damage: parents, grades, and illusions</h3>
-          <p>The flat lines would alarm people if they saw them clearly. Most families do not.</p>
-          <ul>
-            <li>Parents rely on report cards, see mostly As and Bs, and conclude their child is fine.</li>
-            <li>They rarely know how those grades relate to state tests, national benchmarks, or genuine readiness for algebra and beyond.</li>
-            <li>They often do not realize how falling short of proficiency quietly closes doors to future careers.</li>
-          </ul>
-          <p>Teachers see a different reality:</p>
-          <ul>
-            <li>Students with decent grades who cannot reason flexibly with fractions, ratios, or multi-step problems.</li>
-            <li>Classes moving forward while fragile understanding goes unaddressed.</li>
-            <li>Standards-based grading attempting clarity but often drowning families in noise.</li>
-          </ul>
-          <p>The result is a mass illusion of adequacy. Locally everyone feels fine; nationally the floor stays low.</p>
-          <h3 class="subheading">3. Why reforms have not moved the needle</h3>
-          <p>Across decades, education has been awash in reform efforts:</p>
-          <ul>
-            <li>New standards from back-to-basics to Common Core.</li>
-            <li>Accountability regimes and new funding formulas.</li>
-            <li>Waves of curriculum adoptions.</li>
-            <li>Research-backed interventions boasting impressive effect sizes.</li>
-          </ul>
-          <p>Two hard truths explain the lack of impact:</p>
-          <ul>
-            <li>Most reforms operate at the policy and logistics layer, not the cognition layer. They decide which standards or curricula to adopt and entrench testing systems, but they rarely change how teachers understand the subject, elicit reasoning, or rebuild misconceptions.</li>
-            <li>The bottlenecks for teachers remain untouched: time, access to dense cognitive frameworks, and the difficulty of mastering diagnostic craft amid constant churn.</li>
-          </ul>
-          <p>We see the Red Queen effect: the system runs faster&mdash;new initiatives, mandates, dashboards&mdash;yet student understanding stays put.</p>
-          <h3 class="subheading">4. Why math, why early, why now</h3>
-          <p>Research is clear:</p>
-          <ul>
-            <li>Early math skills are among the strongest predictors of later academic success, including reading.</li>
-            <li>Math and literacy achievement are tightly correlated.</li>
-            <li>Students with robust conceptual understanding of arithmetic are far likelier to succeed in algebra, unlocking STEM pathways.</li>
-          </ul>
-          <p>Yet we still operate on a wait-to-fail model. Arithmetic weaknesses go unaddressed until middle school, where they surface as algebra crises. The social and emotional costs are higher by then, and we produce generations comfortable saying, "I am not a math person."</p>
-          <p>Math CoTeacher attacks that bottleneck directly:</p>
-          <ul>
-            <li>Start where trajectories matter most: upper-elementary multiplicative reasoning and fractions, the hinge between counting and algebra worlds.</li>
-            <li>Give teachers and students an always-on co-teacher that spots and rebuilds misconceptions before they calcify.</li>
-            <li>Replace illusions of adequacy with clear maps that show families and educators what is solid, what is fragile, and what comes next.</li>
-          </ul>
-          <p>For 60 years, debates about curricula or squeezing extra points from assessments have been noise. The point is to bend the flat graph upward.</p>
-        </div>
-      </details>
-    </section>
-
-    <section class="card" id="edge">
-      <div class="card-header">
-        <span class="card-number">3</span>
-        <h2>My Edge: Why I Can Build This</h2>
-      </div>
-      <p class="lead">I already built and used the human version of this system and trained others to do it. I am a multi-time successful founder. This is my life's work.</p>
-      <details>
-        <summary>Detail</summary>
-        <div class="details-content">
-          <p>I bring deep domain expertise to the problem:</p>
-          <ul>
-            <li>I have used CBA and Learning Trajectories in real classrooms.</li>
-            <li>I designed and refined an Arithmetic to Algebra framework grounded in that research.</li>
-            <li>I have run 1:1 interviews at scale and trained teachers to do the same.</li>
-          </ul>
-          <p>That yields three rare assets:</p>
-          <ul>
-            <li>A mature, structured cognitive framework for mathematics.</li>
-            <li>Practical know-how for eliciting, interpreting, and acting on student reasoning.</li>
-            <li>The ability to label and evaluate teacher moves and student states&mdash;the high-quality data AI needs.</li>
-          </ul>
-          <p>In startup terms: founder-market fit, a proprietary framework, and a realistic path to a defensible data moat.</p>
-        </div>
-      </details>
-      <details>
-        <summary>More Detail</summary>
-        <div class="details-content">
-          <p>Most education AI projects fail in one of two ways:</p>
-          <ul>
-            <li>Tech-first teams with shallow mental models of teaching build sophisticated answer checkers that miss real learning.</li>
-            <li>Education-first teams with rich expertise never find product-market fit or do not know how to build data-hungry systems.</li>
-          </ul>
-          <p>I sit in the middle.</p>
-          <p>I have personally:</p>
-          <ul>
-            <li>Run hundreds of student interviews with frameworks like CBA and Learning Trajectories.</li>
-            <li>Watched how specific prompts surface specific misconceptions or developmental transitions.</li>
-            <li>Learned the difference between a student getting an answer right and reorganizing their thinking.</li>
-          </ul>
-          <p>I have also:</p>
-          <ul>
-            <li>Built my own cognitive framework, doing the hard conceptual work of defining levels, misconceptions, and instructional moves.</li>
-            <li>Scaled practice by training other educators, so I know how to build the human teams that gather and label data.</li>
-          </ul>
-          <p>Beyond education, I have founded two successful startups, been recognized as a math teacher of the year, had my classroom featured in a book, and spent fifteen years immersed in the history and potential of education.</p>
-          <p>When I talk about capturing reasoning traces, I am not speculating. I know what the data looks like, how messy it is, and what label space matters. That is crucial for building:</p>
-          <ul>
-            <li>Training datasets that go beyond right or wrong.</li>
-            <li>Reward models for reinforcement learning that reflect real pedagogy.</li>
-            <li>Interfaces teachers will actually use instead of abandoning after pilot.</li>
-          </ul>
-          <p>At the start, I am the teacher brain critiquing model behavior. Over time I can codify that brain into processes, guidelines, and training data, so a small expert team can scale the judgment. On a VC whiteboard, that reads: unique data, unique insight, and a path from solo founder to scalable system.</p>
-        </div>
-      </details>
-    </section>
-
-    <section class="card" id="math-coteacher">
-      <div class="card-header">
-        <span class="card-number">4</span>
-        <h2>Math CoTeacher: The Wedge Product</h2>
-      </div>
-      <p class="lead">Math CoTeacher is the first instantiation of the cognitive teacher: an AI that conducts deep math interviews, diagnoses a student's thinking, and uses that diagnosis to drive targeted remediation and enrichment.</p>
-      <details>
-        <summary>Detail</summary>
-        <div class="details-content">
-          <p>Math CoTeacher starts in grades 3-5 and extends through algebra. It mirrors what elite teachers do in a one-on-one interview:</p>
-          <ul>
-            <li>Elicit the student's reasoning, not just their answers.</li>
-            <li>Map that reasoning onto a detailed learning trajectory.</li>
-            <li>Select the next best question, task, or explanation to strengthen conceptual and procedural understanding.</li>
-          </ul>
-          <p>I have already run the analog version with human teachers using frameworks like CBA. Math CoTeacher is that practice, scaled digitally. Every interaction becomes data about the student's attempts, language, inferred level, teacher move, and outcome. The AI keeps getting smarter at diagnosis and instruction.</p>
-        </div>
-      </details>
-      <details>
-        <summary>More Detail</summary>
-        <div class="details-content">
-          <p>In its analog form, Math CoTeacher is a structured one-on-one process where a teacher:</p>
-          <ul>
-            <li>Classifies the student's reasoning (for example, additive thinking with counting strategies, multiplicative thinking with unit confusion, or early functional reasoning).</li>
-            <li>Identifies specific misconceptions or partial understandings.</li>
-            <li>Chooses the next move: a probe question, a representation shift, or a targeted routine.</li>
-          </ul>
-          <p>This is powerful but does not scale. The digital version solves for that:</p>
-          <div class="two-column">
-            <div>
-              <h4 class="subheading">Elicitation</h4>
-              <p>The system runs the interview, posing rich problems, asking follow-ups, and encouraging students to surface their strategies and misconceptions.</p>
+    <div class="max-w-4xl mx-auto rounded-lg overflow-hidden border border-gray-700 bg-black/50 shadow-2xl">
+        <!-- Terminal Header -->
+        <div class="flex items-center justify-between p-3 bg-gray-800 border-b border-gray-700">
+            <div class="flex items-center gap-2">
+                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
             </div>
+            <span class="text-sm text-gray-400">/bin/bash -- CoTeacher_Vision</span>
+            <div></div> <!-- Spacer -->
+        </div>
+
+        <!-- Terminal Body -->
+        <div class="p-6 text-base sm:text-lg leading-relaxed" id="terminal-body">
+            <!-- Fake boot sequence -->
+            <div class="text-green-400">Booting Cognitive Architecture... OK</div>
+            <div class="text-green-400">Loading V.C. Persuasion Module... OK</div>
+            <div class="text-green-400">Ready.</div>
+            <br>
+            
+            <!-- Prompt + Command (from source: page-header h1) -->
             <div>
-              <h4 class="subheading">Cognitive mapping</h4>
-              <p>It uses the counting-to-algebra framework as the state space, inferring levels, misconceptions, and strengths from transcripts and logs.</p>
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./show_project_title.sh</span>
             </div>
-            <div>
-              <h4 class="subheading">Instruction and data generation</h4>
-              <p>The AI chooses the next probe or teaching move, while logging utterances, inferred state, chosen move, and outcomes. The loop produces the data needed to make both the framework and the AI sharper over time.</p>
+            <!-- Output -->
+            <div class="mt-2">
+                <h1 class="text-3xl sm:text-4xl font-bold text-white">Math CoTeacher - The Future of Learning</h1>
             </div>
-          </div>
-          <p>Math CoTeacher is both product and laboratory: immediate value for students and teachers, and a continuous engine for refining cognitive frameworks in any domain.</p>
-        </div>
-      </details>
-    </section>
+            
+            <!-- Prompt + Command (from source: page-header p) -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./print_abstract.sh</span>
+            </div>
+            <!-- Output -->
+            <p class="mt-2 text-xl">
+                Architecting a cognitive teacher that can learn any domain, diagnose understanding, and guide the next leap in human reasoning.
+            </p>
 
-    <section class="card" id="legacy-edtech">
-      <div class="card-header">
-        <span class="card-number">5</span>
-        <h2>Legacy Edtech: Buttons for Kids, Dashboards for Adults</h2>
-      </div>
-      <p class="lead">Legacy edtech fails at two levels. Students learn to game the systems. Schools drown in dashboards and MTSS meetings with little change in teaching.</p>
-      <details>
-        <summary>Detail</summary>
-        <div class="details-content">
-          <p>Students and educators experience shallow systems that reward speed over thinking and generate surface-level data. Budgets bloat, dashboards multiply, yet the same students finish far from grade level.</p>
-        </div>
-      </details>
-      <details>
-        <summary>More Detail</summary>
-        <div class="details-content">
-          <h3 class="subheading">1. Student experience: beating the platform</h3>
-          <p>Students quickly discover how to satisfy the software without learning:</p>
-          <ul>
-            <li><strong>Gaming the system:</strong> rapid guessing, clicking through hints, memorizing item patterns.</li>
-            <li><strong>Extrinsic reward hijack:</strong> points, badges, leaderboards, and skins become the real goal.</li>
-            <li><strong>Escape behavior:</strong> racing through assignments like a standardized test finished in 15 minutes with random answers.</li>
-          </ul>
-          <p>These behaviors require almost no deep thinking because the design primarily tracks correctness and completion, not reasoning quality.</p>
-          <h3 class="subheading">2. School leader experience: the MTSS hamster wheel</h3>
-          <p>Leaders invest in MTSS structures:</p>
-          <ul>
-            <li>Adopt screeners and interim assessments.</li>
-            <li>Purchase platforms that generate dashboards.</li>
-            <li>Run data meetings, intervention blocks, and RTI teams.</li>
-          </ul>
-          <p>On paper it looks robust, yet year-end data reveals the same patterns: students remain below grade level, the same names stay on Tier 2 and Tier 3 rosters, inequities persist.</p>
-          <p>Leaders describe the process as labor-intensive, emotionally draining, and akin to rearranging deck chairs on the Titanic. The tools do not encode deep models of how understanding develops, so the data cannot guide meaningful instruction.</p>
-          <p>My claim: the issue is not a lack of dashboards but a lack of systems that see and act on student thinking. A cognitive teacher flips the script by pushing explicit frameworks, rich reasoning traces, and targeted instructional moves into daily practice.</p>
-          <p>To a VC, this is not "IXL bad, us good." It is a categorical difference: Math CoTeacher encodes how understanding develops and uses that intelligence to drive student and adult decisions. Legacy tools do not.</p>
-        </div>
-      </details>
-    </section>
+            <!-- ==== Card 1: The Vision ==== -->
+            <!-- Prompt + Command -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./cat vision.txt</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 pl-4 border-l-2 border-gray-700">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">[1] The Vision: A Universal Teacher</h2>
+                <p class="mb-6">We are building a cognitive teacher that can learn and teach anything.</p>
+                <ul class="space-y-3 mb-6">
+                    <li><span class="text-green-400">&gt;</span> <strong class="text-yellow-400">[Now]</strong>: build an expert math co-teacher.</li>
+                    <li><span class="text-green-400">&gt;</span> <strong class="text-yellow-400">[Next]</strong>: build an expert reading teacher.</li>
+                    <li><span class="text-green-400">&gt;</span> <strong class="text-yellow-400">[Future]</strong>: build a universal teacher.</li>
+                </ul>
+            </div>
+            <!-- Prompt + Command for details -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./list_details --for=vision</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 space-y-2">
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-vision-1'); return false;">&gt; show_detail_01.sh</a>
+                </div>
+                <!-- Hidden Detail Content -->
+                <div id="detail-vision-1" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>The long-term goal is an AI system that does what expert teachers do across domains: understand how understanding develops, locate a learner along that path, and design the next step to move them forward.</p>
+                    <p>Great teachers rely on an internal map of how thinking grows. Today these maps are implicit, scattered across research, or stored in a handful of experts' heads. We are turning that wisdom into an engine that can build, refine, and use cognitive frameworks so every learner gets world-class, individualized teaching.</p>
+                </div>
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-vision-2'); return false;">&gt; show_more_detail_02.sh</a>
+                </div>
+                <!-- Hidden Detail Content -->
+                <div id="detail-vision-2" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>Expert teaching is not just content knowledge plus clear explanation. It requires an internal, dynamic model of learning. In any domain, master teachers can answer questions like:</p>
+                    <ul>
+                        <li>What stages do students typically move through as they advance from novice to fluent?</li>
+                        <li>Which misconceptions are productive stepping stones and which derail progress?</li>
+                        <li>What is the smallest next move that will nudge this specific learner forward?</li>
+                    </ul>
+                    <p>In math, frameworks like Battista's Cognitively Based Assessment (CBA) and Clements and Sarama's Learning Trajectories make that internal model explicit: learning is a trajectory, not a checklist. Similar trajectories exist in reading, writing, scientific reasoning, design, and music, but they are rarely operationalized.</p>
+                    <p>The vision is an AI cognitive teacher that can represent developmental maps explicitly, infer where a learner sits based on their reasoning, choose actions known to move them, and use resulting data to refine both the map and the teaching policy. Math is the first proving ground. Once the loop of framework &lt;-&gt; data &lt;-&gt; AI decisions &lt;-&gt; learning outcomes works, we have a method for teaching anything, not just another subject chatbot.</p>
+                </div>
+            </div>
 
-    <section class="card" id="motivation">
-      <div class="card-header">
-        <span class="card-number">6</span>
-        <h2>Motivation and EQ: Earning Real Engagement</h2>
-      </div>
-      <p class="lead">Most edtech is tone-deaf motivationally. Students race through or tune out. A cognitive teacher must pair deep models of understanding with deep models of engagement.</p>
-      <details>
-        <summary>Detail</summary>
-        <div class="details-content">
-          <p>Current platforms push gamified candy or encourage escape behaviors because they have not earned trust. By contrast, expert teachers build rapport, read affect, shift tone, and invite students into hard thinking. Large language models can now emulate parts of that EQ layer. We treat motivation as another modeling problem.</p>
-        </div>
-      </details>
-      <details>
-        <summary>More Detail</summary>
-        <div class="details-content">
-          <h3 class="subheading">1. How motivation fails today</h3>
-          <ul>
-            <li><strong>Game-first mode:</strong> students chase points, badges, and streaks while minimizing learning.</li>
-            <li><strong>Escape mode:</strong> students hate the experience and mash through just to be done.</li>
-            <li>Both modes are rational responses to systems that feel impersonal, judgmental, irrelevant, and non-negotiable.</li>
-          </ul>
-          <p>Motivation is the gatekeeper for cognition. Without buy-in, frameworks never get exercised.</p>
-          <h3 class="subheading">2. What expert teachers actually do</h3>
-          <p>In one-on-one settings, master teachers run a parallel motivational engine:</p>
-          <ul>
-            <li>Build rapport quickly using humor, warmth, and genuine curiosity.</li>
-            <li>Read affective signals and distinguish boredom from anxiety or shutdown.</li>
-            <li>Respond culturally and linguistically, honoring identity markers.</li>
-            <li>Set adaptive challenge: lowering the bar to build momentum, raising it to avoid boredom.</li>
-            <li>Frame meaning and show evidence of growth so students see why the work matters.</li>
-          </ul>
-          <p>I have done this in real classrooms. I know how to get almost any student to engage with fidelity.</p>
-          <h3 class="subheading">3. A roadmap for EQ in an AI co-teacher</h3>
-          <p>We approach EQ in three layers:</p>
-          <ol>
-            <li><strong>Detect motivational states.</strong> Treat engagement like another hidden state, using interaction patterns, timing, and language cues to infer whether a student is engaged, anxious, avoidant, or bored.</li>
-            <li><strong>Learn motivational moves.</strong> Encode strategies from expert teachers&mdash;normalizing struggle, offering choices, reflecting feelings, using strength-based framing&mdash;and learn which moves shift behavior.</li>
-            <li><strong>Adapt across cultures and identities.</strong> Build multilingual, culturally aware, bias-conscious interactions by collaborating with educators, collecting diverse data, and stress-testing for fairness.</li>
-          </ol>
-          <p>The thesis: cognitive framework plus reasoning traces plus motivational intelligence equals a true co-teacher, not a math robot. Legacy edtech treats motivation as glitter on worksheets. We treat it as a first-class modeling problem.</p>
-        </div>
-      </details>
-    </section>
+            <!-- ==== Card 2: The Problem ==== -->
+            <!-- Prompt + Command -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./cat problem.txt</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 pl-4 border-l-2 border-gray-700">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">[2] The Problem: Sixty Years, No Progress</h2>
+                <p class="mb-6">We have been running in place for six decades. Most students sit below proficiency, adult numeracy is weak, gaps remain stubborn, and families often have no idea how dire things are.</p>
+                <p>We keep rearranging deck chairs on a sinking ship. It does not have to stay this way. If you consider yourself a math person, try the exercise linked in the source doc; notice the frustration. That is the daily experience of most Americans.</p>
+            </div>
+            <!-- Prompt + Command for details -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./list_details --for=problem</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 space-y-2">
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-problem-1'); return false;">&gt; show_detail_01.sh</a>
+                </div>
+                <div id="detail-problem-1" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>Long-term assessments like NAEP and international benchmarks like TIMSS all tell the same story:</p>
+                    <ul>
+                        <li>Math achievement in the United States has barely moved in decades.</li>
+                        <li>Oscillations exist&mdash;small gains, pandemic dips&mdash;but the long-term trend is flat.</li>
+                        <li>Adult skills mirror this: many adults struggle with multi-step quantitative reasoning in everyday life.</li>
+                    </ul>
+                    <p>At the same time, research has advanced. We know more about learning trajectories, early math predictors, and the tight numeracy-literacy connection. Billions have poured into reforms, materials, and interventions. Meta-analyses stack up. And still the charts stay flat.</p>
+                    <p class="callout">[Insert NAEP chart here if the asset already exists in the project.]</p>
+                    <p>Most parents believe their children are fine. Grades often inflate or fail to align with external benchmarks, so families and educators operate on different maps. Students can collect As and Bs while building shaky math foundations. That was my story too.</p>
+                </div>
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-problem-2'); return false;">&gt; show_more_detail_02.sh</a>
+                </div>
+                <div id="detail-problem-2" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <h3 class="subheading">1. The long-term picture</h3>
+                    <ul>
+                        <li>NAEP Long-Term Trend scores for 13-year-olds have hovered in the same band for roughly 50 years. Modest gains in the early 2000s have now slid back toward 1970s levels.</li>
+                        <li>NAEP's proficient bar is not an honor roll label; it signals solid, grade-level mastery. Yet only about a quarter of eighth graders reach proficient or above in math. Reading is not much better.</li>
+                        <li>Internationally, the United States sits in the middle of the pack on TIMSS and PISA, despite outspending many peers.</li>
+                        <li>Adult assessments such as PIAAC echo the pattern: simple one-step tasks are manageable, but multi-step reasoning and applied numeracy cause steep drop-offs.</li>
+                    </ul>
+                    <p>These trends span generations. We reap what we sow. Even as trillion becomes casual in public discourse, we tolerate mathematical illiteracy. It does not have to stay this way.</p>
+                    <h3 class="subheading">2. Hidden damage: parents, grades, and illusions</h3>
+                    <p>The flat lines would alarm people if they saw them clearly. Most families do not.</p>
+                    <ul>
+                        <li>Parents rely on report cards, see mostly As and Bs, and conclude their child is fine.</li>
+                        <li>They rarely know how those grades relate to state tests, national benchmarks, or genuine readiness for algebra and beyond.</li>
+                        <li>They often do not realize how falling short of proficiency quietly closes doors to future careers.</li>
+                    </ul>
+                    <p>Teachers see a different reality:</p>
+                    <ul>
+                        <li>Students with decent grades who cannot reason flexibly with fractions, ratios, or multi-step problems.</li>
+                        <li>Classes moving forward while fragile understanding goes unaddressed.</li>
+                        <li>Standards-based grading attempting clarity but often drowning families in noise.</li>
+                    </ul>
+                    <p>The result is a mass illusion of adequacy. Locally everyone feels fine; nationally the floor stays low.</p>
+                    <h3 class="subheading">3. Why reforms have not moved the needle</h3>
+                    <p>Across decades, education has been awash in reform efforts:</p>
+                    <ul>
+                        <li>New standards from back-to-basics to Common Core.</li>
+                        <li>Accountability regimes and new funding formulas.</li>
+                        <li>Waves of curriculum adoptions.</li>
+                        <li>Research-backed interventions boasting impressive effect sizes.</li>
+                    </ul>
+                    <p>Two hard truths explain the lack of impact:</p>
+                    <ul>
+                        <li>Most reforms operate at the policy and logistics layer, not the cognition layer. They decide which standards or curricula to adopt and entrench testing systems, but they rarely change how teachers understand the subject, elicit reasoning, or rebuild misconceptions.</li>
+                        <li>The bottlenecks for teachers remain untouched: time, access to dense cognitive frameworks, and the difficulty of mastering diagnostic craft amid constant churn.</li>
+                    </ul>
+                    <p>We see the Red Queen effect: the system runs faster&mdash;new initiatives, mandates, dashboards&mdash;yet student understanding stays put.</p>
+                    <h3 class="subheading">4. Why math, why early, why now</h3>
+                    <p>Research is clear:</p>
+                    <ul>
+                        <li>Early math skills are among the strongest predictors of later academic success, including reading.</li>
+                        <li>Math and literacy achievement are tightly correlated.</li>
+                        <li>Students with robust conceptual understanding of arithmetic are far likelier to succeed in algebra, unlocking STEM pathways.</li>
+                    </ul>
+                    <p>Yet we still operate on a wait-to-fail model. Arithmetic weaknesses go unaddressed until middle school, where they surface as algebra crises. The social and emotional costs are higher by then, and we produce generations comfortable saying, "I am not a math person."</p>
+                    <p>Math CoTeacher attacks that bottleneck directly:</p>
+                    <ul>
+                        <li>Start where trajectories matter most: upper-elementary multiplicative reasoning and fractions, the hinge between counting and algebra worlds.</li>
+                        <li>Give teachers and students an always-on co-teacher that spots and rebuilds misconceptions before they calcify.</li>
+                        <li>Replace illusions of adequacy with clear maps that show families and educators what is solid, what is fragile, and what comes next.</li>
+                    </ul>
+                    <p>For 60 years, debates about curricula or squeezing extra points from assessments have been noise. The point is to bend the flat graph upward.</p>
+                </div>
+            </div>
 
-    <section class="card" id="future">
-      <div class="card-header">
-        <span class="card-number">7</span>
-        <h2>Learn Anything: The Future CoTeacher</h2>
-      </div>
-      <p class="lead">The long-term object is not math software. It is an always-on co-teacher that can turn any moment of confusion into lasting clarity for any human.</p>
-      <details>
-        <summary>Detail</summary>
-        <div class="details-content">
-          <p>Imagine the fundamental unit of progress as the synaptic moment&mdash;the 200 milliseconds where a brain either builds a durable idea or reinforces a misconception. The scarce resource becomes cognitive attention at the learner's edge. The defensibility becomes a living reasoning map sharpened with every use. The product becomes a cognition layer that elicits, interprets, and advances human reasoning.</p>
-          <p>Math CoTeacher is the first wedge. If we can see and move mathematical reasoning for a nine-year-old working on multiplicative thinking, the same substrate can lift reasoning about options pricing, CRISPR, or electrical circuits.</p>
-        </div>
-      </details>
-      <details>
-        <summary>More Detail</summary>
-        <div class="details-content">
-          <p>Two demos make the future visceral:</p>
-          <h3 class="subheading">Scenario 1: The boardroom diagnosis</h3>
-          <p>A fourth grader who was two years behind now derives the quadratic formula while whispering to an AI in her glasses. The investor asks for go-to-market; I ask for their emergency-brake customer. It is every human who will hit confusion in the next ten minutes. The app then exposes and repairs the investor's own distributive property gap in real time. The market shifts from "students" to every brain running house-of-cards math.</p>
-          <h3 class="subheading">Scenario 2: Cognitive sovereignty in ten seconds</h3>
-          <p>I put on smart glasses and ask, "Explain why negative times negative is positive." The system reveals I never owned the concept. Multiply that gap by billions: shoppers, electricians, coders. The customer who "has not been born yet" is simply a new version of the same human, reborn once their illusion of understanding is shattered and rebuilt.</p>
-          <p>Underneath the theatrics lies a simple architecture: elicit rich reasoning, diagnose it on a cognitive map, intervene with the next move (including motivational move), and ledger growth as portable proof. Math is the starting beachhead because early numeracy predicts later success and we already possess a strong map. The destination is a learn-anything co-teacher that quietly pulls reasoning up a notch in any domain.</p>
-        </div>
-      </details>
-    </section>
+            <!-- ==== Card 3: My Edge ==== -->
+            <!-- Prompt + Command -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./cat edge.txt</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 pl-4 border-l-2 border-gray-700">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">[3] My Edge: Why I Can Build This</h2>
+                <p class="mb-6">I already built and used the human version of this system and trained others to do it. I am a multi-time successful founder. This is my life's work.</p>
+            </div>
+            <!-- Prompt + Command for details -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./list_details --for=edge</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 space-y-2">
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-edge-1'); return false;">&gt; show_detail_01.sh</a>
+                </div>
+                <div id="detail-edge-1" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>I bring deep domain expertise to the problem:</p>
+                    <ul>
+                        <li>I have used CBA and Learning Trajectories in real classrooms.</li>
+                        <li>I designed and refined an Arithmetic to Algebra framework grounded in that research.</li>
+                        <li>I have run 1:1 interviews at scale and trained teachers to do the same.</li>
+                    </ul>
+                    <p>That yields three rare assets:</p>
+                    <ul>
+                        <li>A mature, structured cognitive framework for mathematics.</li>
+                        <li>Practical know-how for eliciting, interpreting, and acting on student reasoning.</li>
+                        <li>The ability to label and evaluate teacher moves and student states&mdash;the high-quality data AI needs.</li>
+                    </ul>
+                    <p>In startup terms: founder-market fit, a proprietary framework, and a realistic path to a defensible data moat.</p>
+                </div>
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-edge-2'); return false;">&gt; show_more_detail_02.sh</a>
+                </div>
+                <div id="detail-edge-2" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>Most education AI projects fail in one of two ways:</p>
+                    <ul>
+                        <li>Tech-first teams with shallow mental models of teaching build sophisticated answer checkers that miss real learning.</li>
+                        <li>Education-first teams with rich expertise never find product-market fit or do not know how to build data-hungry systems.</li>
+                    </ul>
+                    <p>I sit in the middle.</p>
+                    <p>I have personally:</p>
+                    <ul>
+                        <li>Run hundreds of student interviews with frameworks like CBA and Learning Trajectories.</li>
+                        <li>Watched how specific prompts surface specific misconceptions or developmental transitions.</li>
+                        <li>Learned the difference between a student getting an answer right and reorganizing their thinking.</li>
+                    </ul>
+                    <p>I have also:</p>
+                    <ul>
+                        <li>Built my own cognitive framework, doing the hard conceptual work of defining levels, misconceptions, and instructional moves.</li>
+                        <li>Scaled practice by training other educators, so I know how to build the human teams that gather and label data.</li>
+                    </ul>
+                    <p>Beyond education, I have founded two successful startups, been recognized as a math teacher of the year, had my classroom featured in a book, and spent fifteen years immersed in the history and potential of education.</p>
+                    <p>When I talk about capturing reasoning traces, I am not speculating. I know what the data looks like, how messy it is, and what label space matters. That is crucial for building:</p>
+                    <ul>
+                        <li>Training datasets that go beyond right or wrong.</li>
+                        <li>Reward models for reinforcement learning that reflect real pedagogy.</li>
+                        <li>Interfaces teachers will actually use instead of abandoning after pilot.</li>
+                    </ul>
+                    <p>At the start, I am the teacher brain critiquing model behavior. Over time I can codify that brain into processes, guidelines, and training data, so a small expert team can scale the judgment. On a VC whiteboard, that reads: unique data, unique insight, and a path from solo founder to scalable system.</p>
+                </div>
+            </div>
 
-    <section class="card" id="educated-world">
-      <div class="card-header">
-        <span class="card-number">8</span>
-        <h2>The Educated World: Cognitive Sovereignty for Everyone</h2>
-      </div>
-      <p class="lead">The end state is a world where deep numeracy and literacy are normal, where most kids are self-directed learners by middle school, and where education stops functioning as a hidden caste system.</p>
-      <details>
-        <summary>Detail</summary>
-        <div class="details-content">
-          <p>Today education behaves like a sorting machine. Kids move in age cohorts through one-size-fits-no-one curricula, graded with signals that hide more than they reveal. Many fall off the path to higher-order math and complex reading long before adolescence, usually along socioeconomic lines. Math CoTeacher aims to flip that script.</p>
+            <!-- ==== Card 4: Math CoTeacher ==== -->
+            <!-- Prompt + Command -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./cat math-coteacher.txt</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 pl-4 border-l-2 border-gray-700">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">[4] Math CoTeacher: The Wedge Product</h2>
+                <p class="mb-6">Math CoTeacher is the first instantiation of the cognitive teacher: an AI that conducts deep math interviews, diagnoses a student's thinking, and uses that diagnosis to drive targeted remediation and enrichment.</p>
+            </div>
+            <!-- Prompt + Command for details -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./list_details --for=math-coteacher</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 space-y-2">
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-math-coteacher-1'); return false;">&gt; show_detail_01.sh</a>
+                </div>
+                <div id="detail-math-coteacher-1" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>Math CoTeacher starts in grades 3-5 and extends through algebra. It mirrors what elite teachers do in a one-on-one interview:</p>
+                    <ul>
+                        <li>Elicit the student's reasoning, not just their answers.</li>
+                        <li>Map that reasoning onto a detailed learning trajectory.</li>
+                        <li>Select the next best question, task, or explanation to strengthen conceptual and procedural understanding.</li>
+                    </ul>
+                    <p>I have already run the analog version with human teachers using frameworks like CBA. Math CoTeacher is that practice, scaled digitally. Every interaction becomes data about the student's attempts, language, inferred level, teacher move, and outcome. The AI keeps getting smarter at diagnosis and instruction.</p>
+                </div>
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-math-coteacher-2'); return false;">&gt; show_more_detail_02.sh</a>
+                </div>
+                <div id="detail-math-coteacher-2" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>In its analog form, Math CoTeacher is a structured one-on-one process where a teacher:</p>
+                    <ul>
+                        <li>Classifies the student's reasoning (for example, additive thinking with counting strategies, multiplicative thinking with unit confusion, or early functional reasoning).</li>
+                        <li>Identifies specific misconceptions or partial understandings.</li>
+                        <li>Chooses the next move: a probe question, a representation shift, or a targeted routine.</li>
+                    </ul>
+                    <p>This is powerful but does not scale. The digital version solves for that:</p>
+                    
+                    <!-- Note: The two-column layout from the source is simplified to a single column for the terminal theme -->
+                    <div>
+                        <h4 class="subheading">Elicitation</h4>
+                        <p>The system runs the interview, posing rich problems, asking follow-ups, and encouraging students to surface their strategies and misconceptions.</p>
+                    </div>
+                    <div>
+                        <h4 class="subheading">Cognitive mapping</h4>
+                        <p>It uses the counting-to-algebra framework as the state space, inferring levels, misconceptions, and strengths from transcripts and logs.</p>
+                    </div>
+                    <div>
+                        <h4 class="subheading">Instruction and data generation</h4>
+                        <p>The AI chooses the next probe or teaching move, while logging utterances, inferred state, chosen move, and outcomes. The loop produces the data needed to make both the framework and the AI sharper over time.</p>
+                    </div>
+                    
+                    <p>Math CoTeacher is both product and laboratory: immediate value for students and teachers, and a continuous engine for refining cognitive frameworks in any domain.</p>
+                </div>
+            </div>
+            
+            <!-- ==== Card 5: Legacy Edtech ==== -->
+            <!-- Prompt + Command -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./cat legacy-edtech.txt</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 pl-4 border-l-2 border-gray-700">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">[5] Legacy Edtech: Buttons for Kids, Dashboards for Adults</h2>
+                <p class="mb-6">Legacy edtech fails at two levels. Students learn to game the systems. Schools drown in dashboards and MTSS meetings with little change in teaching.</p>
+            </div>
+            <!-- Prompt + Command for details -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./list_details --for=legacy-edtech</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 space-y-2">
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-legacy-edtech-1'); return false;">&gt; show_detail_01.sh</a>
+                </div>
+                <div id="detail-legacy-edtech-1" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>Students and educators experience shallow systems that reward speed over thinking and generate surface-level data. Budgets bloat, dashboards multiply, yet the same students finish far from grade level.</p>
+                </div>
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-legacy-edtech-2'); return false;">&gt; show_more_detail_02.sh</a>
+                </div>
+                <div id="detail-legacy-edtech-2" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <h3 class="subheading">1. Student experience: beating the platform</h3>
+                    <p>Students quickly discover how to satisfy the software without learning:</p>
+                    <ul>
+                        <li><strong>Gaming the system:</strong> rapid guessing, clicking through hints, memorizing item patterns.</li>
+                        <li><strong>Extrinsic reward hijack:</strong> points, badges, leaderboards, and skins become the real goal.</li>
+                        <li><strong>Escape behavior:</strong> racing through assignments like a standardized test finished in 15 minutes with random answers.</li>
+                    </ul>
+                    <p>These behaviors require almost no deep thinking because the design primarily tracks correctness and completion, not reasoning quality.</p>
+                    <h3 class="subheading">2. School leader experience: the MTSS hamster wheel</h3>
+                    <p>Leaders invest in MTSS structures:</p>
+                    <ul>
+                        <li>Adopt screeners and interim assessments.</li>
+                        <li>Purchase platforms that generate dashboards.</li>
+                        <li>Run data meetings, intervention blocks, and RTI teams.</li>
+                    </ul>
+                    <p>On paper it looks robust, yet year-end data reveals the same patterns: students remain below grade level, the same names stay on Tier 2 and Tier 3 rosters, inequities persist.</p>
+                    <p>Leaders describe the process as labor-intensive, emotionally draining, and akin to rearranging deck chairs on the Titanic. The tools do not encode deep models of how understanding develops, so the data cannot guide meaningful instruction.</p>
+                    <p>My claim: the issue is not a lack of dashboards but a lack of systems that see and act on student thinking. A cognitive teacher flips the script by pushing explicit frameworks, rich reasoning traces, and targeted instructional moves into daily practice.</p>
+                    <p>To a VC, this is not "IXL bad, us good." It is a categorical difference: Math CoTeacher encodes how understanding develops and uses that intelligence to drive student and adult decisions. Legacy tools do not.</p>
+                </div>
+            </div>
+
+            <!-- ==== Card 6: Motivation and EQ ==== -->
+            <!-- Prompt + Command -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./cat motivation.txt</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 pl-4 border-l-2 border-gray-700">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">[6] Motivation and EQ: Earning Real Engagement</h2>
+                <p class="mb-6">Most edtech is tone-deaf motivationally. Students race through or tune out. A cognitive teacher must pair deep models of understanding with deep models of engagement.</p>
+            </div>
+            <!-- Prompt + Command for details -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./list_details --for=motivation</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 space-y-2">
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-motivation-1'); return false;">&gt; show_detail_01.sh</a>
+                </div>
+                <div id="detail-motivation-1" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>Current platforms push gamified candy or encourage escape behaviors because they have not earned trust. By contrast, expert teachers build rapport, read affect, shift tone, and invite students into hard thinking. Large language models can now emulate parts of that EQ layer. We treat motivation as another modeling problem.</p>
+                </div>
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-motivation-2'); return false;">&gt; show_more_detail_02.sh</a>
+                </div>
+                <div id="detail-motivation-2" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <h3 class="subheading">1. How motivation fails today</h3>
+                    <ul>
+                        <li><strong>Game-first mode:</strong> students chase points, badges, and streaks while minimizing learning.</li>
+                        <li><strong>Escape mode:</strong> students hate the experience and mash through just to be done.</li>
+                        <li>Both modes are rational responses to systems that feel impersonal, judgmental, irrelevant, and non-negotiable.</li>
+                    </ul>
+                    <p>Motivation is the gatekeeper for cognition. Without buy-in, frameworks never get exercised.</p>
+                    <h3 class="subheading">2. What expert teachers actually do</h3>
+                    <p>In one-on-one settings, master teachers run a parallel motivational engine:</p>
+                    <ul>
+                        <li>Build rapport quickly using humor, warmth, and genuine curiosity.</li>
+                        <li>Read affective signals and distinguish boredom from anxiety or shutdown.</li>
+                        <li>Respond culturally and linguistically, honoring identity markers.</li>
+                        <li>Set adaptive challenge: lowering the bar to build momentum, raising it to avoid boredom.</li>
+                        <li>Frame meaning and show evidence of growth so students see why the work matters.</li>
+                    </ul>
+                    <p>I have done this in real classrooms. I know how to get almost any student to engage with fidelity.</p>
+                    <h3 class="subheading">3. A roadmap for EQ in an AI co-teacher</h3>
+                    <p>We approach EQ in three layers:</p>
+                    <ol>
+                        <li><strong>Detect motivational states.</strong> Treat engagement like another hidden state, using interaction patterns, timing, and language cues to infer whether a student is engaged, anxious, avoidant, or bored.</li>
+                        <li><strong>Learn motivational moves.</strong> Encode strategies from expert teachers&mdash;normalizing struggle, offering choices, reflecting feelings, using strength-based framing&mdash;and learn which moves shift behavior.</li>
+                        <li><strong>Adapt across cultures and identities.</strong> Build multilingual, culturally aware, bias-conscious interactions by collaborating with educators, collecting diverse data, and stress-testing for fairness.</li>
+                    </ol>
+                    <p>The thesis: cognitive framework plus reasoning traces plus motivational intelligence equals a true co-teacher, not a math robot. Legacy edtech treats motivation as glitter on worksheets. We treat it as a first-class modeling problem.</p>
+                </div>
+            </div>
+
+            <!-- ==== Card 7: Learn Anything ==== -->
+            <!-- Prompt + Command -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./cat future.txt</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 pl-4 border-l-2 border-gray-700">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">[7] Learn Anything: The Future CoTeacher</h2>
+                <p class="mb-6">The long-term object is not math software. It is an always-on co-teacher that can turn any moment of confusion into lasting clarity for any human.</p>
+            </div>
+            <!-- Prompt + Command for details -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./list_details --for=future</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 space-y-2">
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-future-1'); return false;">&gt; show_detail_01.sh</a>
+                </div>
+                <div id="detail-future-1" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>Imagine the fundamental unit of progress as the synaptic moment&mdash;the 200 milliseconds where a brain either builds a durable idea or reinforces a misconception. The scarce resource becomes cognitive attention at the learner's edge. The defensibility becomes a living reasoning map sharpened with every use. The product becomes a cognition layer that elicits, interprets, and advances human reasoning.</p>
+                    <p>Math CoTeacher is the first wedge. If we can see and move mathematical reasoning for a nine-year-old working on multiplicative thinking, the same substrate can lift reasoning about options pricing, CRISPR, or electrical circuits.</p>
+                </div>
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-future-2'); return false;">&gt; show_more_detail_02.sh</a>
+                </div>
+                <div id="detail-future-2" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>Two demos make the future visceral:</p>
+                    <h3 class="subheading">Scenario 1: The boardroom diagnosis</h3>
+                    <p>A fourth grader who was two years behind now derives the quadratic formula while whispering to an AI in her glasses. The investor asks for go-to-market; I ask for their emergency-brake customer. It is every human who will hit confusion in the next ten minutes. The app then exposes and repairs the investor's own distributive property gap in real time. The market shifts from "students" to every brain running house-of-cards math.</p>
+                    <h3 class="subheading">Scenario 2: Cognitive sovereignty in ten seconds</h3>
+                    <p>I put on smart glasses and ask, "Explain why negative times negative is positive." The system reveals I never owned the concept. Multiply that gap by billions: shoppers, electricians, coders. The customer who "has not been born yet" is simply a new version of the same human, reborn once their illusion of understanding is shattered and rebuilt.</p>
+                    <p>Underneath the theatrics lies a simple architecture: elicit rich reasoning, diagnose it on a cognitive map, intervene with the next move (including motivational move), and ledger growth as portable proof. Math is the starting beachhead because early numeracy predicts later success and we already possess a strong map. The destination is a learn-anything co-teacher that quietly pulls reasoning up a notch in any domain.</p>
+                </div>
+            </div>
+
+            <!-- ==== Card 8: The Educated World ==== -->
+            <!-- Prompt + Command -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./cat educated-world.txt</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 pl-4 border-l-2 border-gray-700">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">[8] The Educated World: Cognitive Sovereignty for Everyone</h2>
+                <p class="mb-6">The end state is a world where deep numeracy and literacy are normal, where most kids are self-directed learners by middle school, and where education stops functioning as a hidden caste system.</p>
+            </div>
+            <!-- Prompt + Command for details -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="text-white"> ./list_details --for=educated-world</span>
+            </div>
+            <!-- Output -->
+            <div class="mt-2 space-y-2">
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-educated-world-1'); return false;">&gt; show_detail_01.sh</a>
+                </div>
+                <div id="detail-educated-world-1" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <p>Today education behaves like a sorting machine. Kids move in age cohorts through one-size-fits-no-one curricula, graded with signals that hide more than they reveal. Many fall off the path to higher-order math and complex reading long before adolescence, usually along socioeconomic lines. Math CoTeacher aims to flip that script.</p>
+                </div>
+                <div>
+                    <a href="#" class="command-link" onclick="toggleDetail('detail-educated-world-2'); return false;">&gt; show_more_detail_02.sh</a>
+                </div>
+                <div id="detail-educated-world-2" class="hidden mt-2 pl-4 border-l-2 border-gray-700 terminal-content">
+                    <h3 class="subheading">The old regime: industrial schooling and hidden castes</h3>
+                    <p>In the current system:</p>
+                    <ul>
+                        <li>Students are processed in age cohorts with generic curricula.</li>
+                        <li>Teachers rarely receive training in cognitive science, learning trajectories, or diagnostic interviewing.</li>
+                        <li>Assessment relies on proxies: letter grades conflating mastery with compliance, periodic tests sampling narrow skills, proficiency labels that obscure what students actually know.</li>
+                    </ul>
+                    <p>The result is brutal: by middle school many students are locked out of advanced mathematics and complex reading. Adult numeracy data shows the echo decades later, disproportionally along socioeconomic and racial lines. Parents often cannot see the problem because report cards do not align with reality.</p>
+                    <h3 class="subheading">The new regime: cognition as infrastructure</h3>
+                    <p>An educated world looks different in three ways:</p>
+                    <ul>
+                        <li><strong>Reasoning is visible and actionable.</strong> Learning maps grounded in cognitive trajectories replace opaque grades. Evidence clips, whiteboard snapshots, and transcripts make understanding tangible.</li>
+                        <li><strong>Teachers become high-leverage coaches.</strong> A co-teacher system watches cognition unfold and provides real-time prompts. Embedded professional development, automated planning, and distilled insights give teachers superpowers instead of impossible workloads.</li>
+                        <li><strong>Learners own their trajectory.</strong> Students see where they are, set specific goals, and carry a mastery ledger that travels beyond a single school. As basic skills solidify early, adolescents can become self-directed explorers by middle school.</li>
+                    </ul>
+                    <p>The payoff is cognitive sovereignty: anyone can interrogate their understanding and grow it on demand without winning the teacher or school lottery. Math CoTeacher is the first serious attempt to build the infrastructure that future requires.</p>
+                </div>
+            </div>
+
+            <!-- Final Prompt -->
+            <div class="mt-6">
+                <span class="text-cyan-400">[Guest@CoTeacher-VM ~]$</span>
+                <span class="cursor"></span>
+            </div>
         </div>
-      </details>
-      <details>
-        <summary>More Detail</summary>
-        <div class="details-content">
-          <h3 class="subheading">The old regime: industrial schooling and hidden castes</h3>
-          <p>In the current system:</p>
-          <ul>
-            <li>Students are processed in age cohorts with generic curricula.</li>
-            <li>Teachers rarely receive training in cognitive science, learning trajectories, or diagnostic interviewing.</li>
-            <li>Assessment relies on proxies: letter grades conflating mastery with compliance, periodic tests sampling narrow skills, proficiency labels that obscure what students actually know.</li>
-          </ul>
-          <p>The result is brutal: by middle school many students are locked out of advanced mathematics and complex reading. Adult numeracy data shows the echo decades later, disproportionally along socioeconomic and racial lines. Parents often cannot see the problem because report cards do not align with reality.</p>
-          <h3 class="subheading">The new regime: cognition as infrastructure</h3>
-          <p>An educated world looks different in three ways:</p>
-          <ul>
-            <li><strong>Reasoning is visible and actionable.</strong> Learning maps grounded in cognitive trajectories replace opaque grades. Evidence clips, whiteboard snapshots, and transcripts make understanding tangible.</li>
-            <li><strong>Teachers become high-leverage coaches.</strong> A co-teacher system watches cognition unfold and provides real-time prompts. Embedded professional development, automated planning, and distilled insights give teachers superpowers instead of impossible workloads.</li>
-            <li><strong>Learners own their trajectory.</strong> Students see where they are, set specific goals, and carry a mastery ledger that travels beyond a single school. As basic skills solidify early, adolescents can become self-directed explorers by middle school.</li>
-          </ul>
-          <p>The payoff is cognitive sovereignty: anyone can interrogate their understanding and grow it on demand without winning the teacher or school lottery. Math CoTeacher is the first serious attempt to build the infrastructure that future requires.</p>
-        </div>
-      </details>
-    </section>
-  </main>
+    </div>
+
 </body>
 </html>
