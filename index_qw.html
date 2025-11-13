@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math CoTeacher - The Last EdTech Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Fira Code', monospace; }
+        .cursor { display: inline-block; width: 0.75em; height: 1.5em; background-color: #9CA3AF; animation: blink 1s steps(1) infinite; vertical-align: bottom; margin-left: 0.25em; }
+        @keyframes blink { 50% { background-color: transparent; } }
+        .command-link { color: #60A5FA; text-decoration: none; cursor: pointer; }
+        .command-link:hover { background-color: #60A5FA; color: #111827; }
+    </style>
+    <script> function toggleDetail(id) { const el = document.getElementById(id); if (el) el.classList.toggle('hidden'); } </script>
+</head>
+<body class="bg-gray-900 text-gray-300 min-h-screen p-4 sm:p-8">
+    <div class="max-w-5xl mx-auto rounded-lg border border-gray-700 bg-black/50 shadow-2xl">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-3 bg-gray-800 border-b border-gray-700">
+            <div class="flex items-center gap-2"><span class="w-3 h-3 bg-red-500 rounded-full"></span><span class="w-3 h-3 bg-yellow-500 rounded-full"></span><span class="w-3 h-3 bg-green-500 rounded-full"></span></div>
+            <span class="text-sm text-gray-400">math-coteacher --pitch-deck</span><div></div>
+        </div>
+
+        <div class="p-6 sm:p-10 text-base sm:text-lg leading-relaxed" id="terminal-body">
+            
+            <!-- ==== HERO: The 10x Claim ==== -->
+            <div>
+                <span class="text-cyan-400"></span> <span class="text-white"></span>
+            </div>
+            <div class="mt-4 pl-4 border-l-2 border-green-500">
+                <h1 class="text-4xl sm:text-5xl font-bold text-green-400 mb-3">Math CoTeacher</h1>
+                <p class="text-xl text-gray-200 mb-2">Creating AI that fixes why students fail math, not just that they got the wrong answer.</p>
+                <p class="text-lg text-gray-400">LLMs can scale two things that matter: an expert's diagnostic reasoning and a master teacher's tactical empathy.</p>
+            </div>
+
+            <!-- ==== THE CRISIS: Why Now ==== -->
+            <div class="mt-8">
+                <span class="text-cyan-400"></span> <span class="text-white"> Generational Failing</span>
+            </div>
+            <div class="mt-2 pl-4 border-l-2 border-red-500 space-y-2">
+                <p><span class="text-red-400">❌</span> <strong class="text-white">60 years of failing math scores and a flat trendline.</strong> We're failing generationally.</p>
+                <p><span class="text-red-400">❌</span> <strong class="text-white">Parents are blind.</strong> Kids get As while building shaky foundations. No one sees the gap until it's too late.</p>
+                <p><span class="text-green-400">✓</span> <strong class="text-white">AI can now see reasoning.</strong> LLMs + cognitive frameworks = the first system that doesn't just score answers, but *diagnoses thinking*.</p>
+            </div>
+
+            <!-- ==== MY EDGE: Founder-Market Fit ==== -->
+            <div class="mt-8">
+                <span class="text-cyan-400"></span> <span class="text-white"> Why Me</span>
+            </div>
+            <div class="mt-2 pl-4 border-l-2 border-blue-500">
+                <p class="text-yellow-400 font-semibold mb-3">I built the human version of this. Now I'm scaling it with AI.</p>
+                <ul class="space-y-2 text-gray-200">
+                    <li>→ Ran <strong>500+ 1-on-1 cognitive interviews</strong> using Battista's CBA and Clements/Sarama trajectories.</li>
+                    <li>→ Built a <strong>mastery-based Arithmetic→Algebra framework</strong> from scratch. It's the map.</li>
+                    <li>→ Trained teachers nationwide to elicit and remediate student reasoning. I know how to scale the human judgment.</li>
+                    <li>→ <strong>2x successful edtech founder.</strong> Teacher of the Year. Classroom featured in research. 15 years immersed.</li>
+                </ul>
+                <p class="text-gray-400 mt-3 text-sm">I have the framework, the data playbook, and the scars. No one else is coming from this direction.</p>
+            </div>
+
+            <!-- ==== THE WEDGE: Show, Don't Tell ==== -->
+            <div class="mt-8">
+                <span class="text-cyan-400"></span> <span class="text-white"> Demo</span>
+            </div>
+            <div class="mt-2 pl-4 border-l-2 border-purple-500">
+                <p class="text-white font-semibold mb-3">How it works in 90 seconds:</p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-200">
+                    <li><strong>Elicit:</strong> Student solves a problem on a digital whiteboard. AI asks: "How did you think about that?"</li>
+                    <li><strong>Diagnose:</strong> AI maps the transcript to our framework: <span class="text-yellow-400">"Additive thinking, counting strategies, fragile on unit coordination."</span></li>
+                    <li><strong>Intervene:</strong> AI selects the perfect nudge: a visual model, a counter-example, or a strategic question—not a hint.</li>
+                    <li><strong>Learn:</strong> Every interaction trains the system. Framework gets sharper. Instruction gets tighter.</li>
+                </ol>
+                <p class="text-gray-400 mt-3 text-sm italic">Result: Misconceptions get repaired *before* they calcify. Teachers get superpowers. Data becomes a moat.</p>
+            </div>
+
+            <!-- ==== WHY LEGACY FAILS: The Kill Shot ==== -->
+            <div class="mt-8">
+                <span class="text-cyan-400"></span> <span class="text-white"> Legacy EdTech vs. Math CoTeacher</span>
+            </div>
+            <div class="mt-2 pl-4 border-l-2 border-orange-500">
+                <p class="text-orange-400 font-semibold">Legacy edtech teaches kids to game the system. We teach them to think.</p>
+                <table class="w-full mt-3 text-sm">
+                    <tr class="border-b border-gray-700"><th class="text-left py-2 text-gray-400">IXL, Khan, Zearn</th><th class="text-left py-2 text-blue-400">Math CoTeacher</th></tr>
+                    <tr class="border-b border-gray-800"><td class="py-2 text-gray-500">Tracks right/wrong</td><td class="py-2 text-gray-200">Maps cognitive state</td></tr>
+                    <tr class="border-b border-gray-800"><td class="py-2 text-gray-500">Hides reasoning</td><td class="py-2 text-gray-200">Surfaces reasoning traces</td></tr>
+                    <tr class="border-b border-gray-800"><td class="py-2 text-gray-500">Drowns teachers in dashboards</td><td class="py-2 text-gray-200">Acts as a co-teacher in the loop</td></tr>
+                </table>
+            </div>
+
+            <!-- ==== NOW → NEXT → FUTURE: The Ladder ==== -->
+            <div class="mt-8">
+                <span class="text-cyan-400"></span> <span class="text-white"> Trajectory</span>
+            </div>
+            <div class="mt-2 pl-4 border-l-2 border-cyan-500 space-y-2">
+                <p><strong class="text-yellow-400">[Now]</strong> Math CoTeacher: AI interviews & diagnoses in grades 3-8. First product live. Early pilots showing 2x faster misconception repair.</p>
+                <p><strong class="text-yellow-400">[Next]</strong> Reading CoTeacher: Same engine, literacy trajectories. Proof we're a cognition platform, not a math app.</p>
+                <p><strong class="text-yellow-400">[Future]</strong> Universal Teacher: One AI that can teach anything—science, coding, medical diagnosis—by building & refining cognitive maps on the fly.</p>
+            </div>
+
+            <!-- ==== THE ENDGAME: 3 Sentences ==== -->
+            <div class="mt-8">
+                <span class="text-cyan-400"></span> <span class="text-white"> The Vision</span>
+            </div>
+            <div class="mt-2 pl-4 border-l-2 border-green-500">
+                <p class="text-gray-200">Every human gets a world-class tutor in their pocket. Education stops sorting and starts developing. <strong class="text-white">We become the cognition layer for learning.</strong></p>
+            </div>
+
+            <!-- ==== CALL TO ACTION: What I Need ==== -->
+            <div class="mt-10">
+                <span class="text-cyan-400"></span> <span class="text-white"> Next Steps</span>
+            </div>
+            <div class="mt-2 pl-4 border-l-2 border-yellow-500 space-y-3">
+                <p class="text-yellow-400 font-semibold">Building the founding team. Raising a pre-seed round.</p>
+                <p><strong class="text-white">Co-founders:</strong> AI/ML engineer who wants to build agents that reason about reasoning. Someone obsessed with data moats and RLHF.</p>
+                <p><strong class="text-white">Investors:</strong> If you want to back the team that ends edtech's 60-year plateau and builds the universal teacher, let's talk.</p>
+                <div class="mt-4">
+                    <a href="#" class="command-link font-semibold">[Email Me] → mark@mathcoteacher.com</a> <span class="text-gray-600 ml-4"></span>
+                </div>
+            </div>
+
+            <!-- Optional Deep-Dive Section (for the obsessed) -->
+             <!--
+            <div class="mt-12 pt-6 border-t border-gray-800">
+                <div class="text-gray-500 text-sm">For the thesis behind each claim:</div>
+                <div class="mt-3 space-y-1">
+                    <a href="#" class="command-link" onclick="toggleDetail('deep-crisis'); return false;">&gt; read-crisis-data.md</a>
+                    <a href="#" class="command-link" onclick="toggleDetail('deep-framework'); return false;">&gt; read-framework-whitepaper.md</a>
+                    <a href="#" class="command-link" onclick="toggleDetail('deep-demos'); return false;">&gt; watch-product-demo.mp4</a>
+                </div>
+            </div>
+            <div id="deep-crisis" class="hidden mt-2 pl-4 border-l-2 border-gray-700 text-sm text-gray-500">[Collapsed: NAEP charts, PIAAC data, grade inflation studies]</div>
+            <div id="deep-framework" class="hidden mt-2 pl-4 border-l-2 border-gray-700 text-sm text-gray-500">[Collapsed: CBA, Learning Trajectories, proprietary Arithmetic→Algebra map]</div>
+            <div id="deep-demos" class="hidden mt-2 pl-4 border-l-2 border-gray-700 text-sm text-gray-500">[Collapsed: Live demo links, pilot data, student reasoning clips]</div>
+
+            <div class="mt-8">
+                <span class="text-cyan-400">[you@opportunity]$</span> <span class="cursor"></span>
+            </div>
+            -->
+        </div>
+    </div>
+</body>
+</html>
