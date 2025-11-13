@@ -54,14 +54,32 @@
         strong {
             color: #fafafa; /* Make bold text slightly brighter */
         }
+        .link-blue {
+        color: #81d4fa;
+        }
+
     </style>
 </head>
 <body>
     <main>
         <header>
             <h1>Math CoTeacher</h1>
-            <p>Expert math teaching from AI</p>
-            <p>Math CoTeacher will be the first AI to use a cognitive model of how math understanding actually develops, run one-on-one diagnostic conversations with students, and remediate or enrich like an expert human teacher.</p>
+            <p><strong>The first AI teacher that models how math understanding actually develops, and fixes it.</strong></p>
+            <p>Three out of four 8th graders in America are below proficient in math. Math CoTeacher will fix that, running one-on-one diagnostic conversations, pinpointing misconceptions on a cognitive learning trajectory, and teaching like an expert human, at scale.</p>
+            <p><em>Built by a 2x founder who was also a Math Teacher of the Year that created a proven cognitive map from arithmetic to algebra.</em></p>
+            <p><span class="link-blue">Email Me →<span id="contact-email"> mark@mathcoteacher.com</span></span></p>
+            <button type="button" onclick="copyEmail()">Copy email</button>
+
+            <script>
+            function copyEmail() {
+                const email = document.getElementById('contact-email').textContent.trim();
+                navigator.clipboard?.writeText(email).then(() => {
+                // Optional: tiny visual feedback
+                alert('Email copied to clipboard');
+                });
+            }
+            </script>
+
         </header>
 
         <section>
@@ -127,7 +145,18 @@
                 <li><strong>Co-founder:</strong> AI/ML engineer who wants to do the most meaningful work of their life.</li>
                 <li><strong>Investor:</strong> who wants to back the team that ends education's 60-year plateau and gets to tell the canonical story about being the first investor in the most important company in history.</li>
             </ul>
-            <p><strong><a href="mailto:mark@mathcoteacher.com">Email Me → mark@mathcoteacher.com</a></strong></p>
+            <p><span class="link-blue">Email Me →<span id="contact-email"> mark@mathcoteacher.com</span></span></p>
+            <button type="button" onclick="copyEmail()">Copy email</button>
+
+            <script>
+            function copyEmail() {
+                const email = document.getElementById('contact-email').textContent.trim();
+                navigator.clipboard?.writeText(email).then(() => {
+                // Optional: tiny visual feedback
+                alert('Email copied to clipboard');
+                });
+            }
+            </script>
         </section>
     </main>
 
@@ -136,9 +165,11 @@
             <ol>
                 <li>If you're here, you are likely good at math.</li>
                 <li>Most of America and the world is not.</li>
-                <li>You likely can't relate, to the daily frustration that turns to apathy for students or to the anxiety elementary school teachers feel about teaching the math they never really learned themselves.</li>
+                <li>You likely can't relate to the daily frustration that turns to apathy for students or to the anxiety elementary school teachers feel about teaching the math they never really learned themselves.</li>
                 <li>That's <strong>the Curse of Knowledge,</strong> not any moral failing.</li>
                 <li><strong><a href="math.html">Try this.</a></strong> See if it can help you feel a little bit of what math class is like for the 3 out of 4 8th graders in America who are below proficient and why Math CoTeacher could be such a boon for mathematics education.</li>
+                <li>You probably *did* feel the frustration of being ahead of everyone else, being bored, not challenged, and maybe even picked on for being good at math.</li>
+                <li>When I say math education in America serves no one well, that's part of what I mean. Join me and make math education effective and satisfying for every kind of student.</li>
             </ol>
         </section>
         
