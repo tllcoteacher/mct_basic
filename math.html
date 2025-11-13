@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Empathy Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* --- Minimalist & Academic Theme --- */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@500&display=swap');
+
+        :root {
+            --bg-main: #f8f9fa; /* Very light gray */
+            --text-primary: #212529; /* Nearly black */
+            --text-secondary: #495057; /* Dark gray */
+            --accent-color: #0d6efd; /* Standard bootstrap blue */
+            --accent-hover: #0b5ed7;
+            --border-color: #dee2e6; /* Light gray for borders */
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+        }
+
+        .main-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .prose {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            line-height: 1.8;
+            max-width: 65ch; /* Optimal characters per line for reading */
+            margin: 0 auto;
+        }
+        
+        hr {
+             border-color: var(--border-color);
+        }
+
+        .problem-section {
+            padding: 2rem 0;
+        }
+
+        .problem-section h2 {
+            font-family: 'Roboto Mono', monospace;
+            color: var(--text-primary);
+            font-size: 1.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .problem-section .catch {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .problem-section .explanation {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .problem-section .font-mono {
+            font-family: 'Roboto Mono', monospace;
+            color: #d63384; /* A soft pink for code/data */
+        }
+
+        .problem-section .link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 700;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* System UI font for links */
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        
+        .problem-section .link:hover {
+            border-color: var(--accent-hover);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+
+    <div class="w-full max-w-3xl mx-auto my-8 sm:my-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl sm:text-5xl main-title">Feeling What They Feel</h1>
+        </div>
+        
+        <div class="prose">
+            <p>Three out of four 8th graders in America struggle in math. It’s not because 8th grade math itself is so difficult but because students’ knowledge is a House of Cards waiting to fall down. The shift from additive reasoning to multiplicative (3rd and 4th grades), then fractional (4th-6th), then proportional (5th-middle school) are key stumbling blocks that build on each other. When one isn’t secured, the future knowledge doesn’t stick.</p>
+            <p>This can be hard for adults to understand, whether that is someone who excelled in math their entire life or even an adult who didn’t really but forgets what it was like to try to learn it. This applies to teachers. If that’s you, then below are some problems to help you feel what it’s like to be those three out of four struggling students. It’s just multiplication after all, how hard can it be?</p>
+        </div>
+
+        <hr class="my-12">
+
+        <div class="problem-section">
+            <h2>1. &nbsp; 43 x 25</h2>
+            <p class="catch">The catch is that this multiplication problem is in <strong>base-6</strong>, not base-10.</p>
+            <p class="explanation">This might illustrate the frustrations students can feel with the invisible concepts in this procedure, such as place value and the distributive property.</p>
+            <a href="./base6.html" target="_blank" class="link">
+                See a base-6 ‘odometer’ to help think outside of base-10 &rarr;
+            </a>
+        </div>
+
+        <hr class="my-12">
+
+        <div class="problem-section">
+            <h2>2. &nbsp; DF x EG</h2>
+            <p class="catch">This time let’s replace digits with letters to remove the familiarity we have with the number system. This problem is in <strong>base-7</strong>.</p>
+             <ul class="list-none my-4 pl-0">
+                <li class="font-mono">A = 0</li>
+                <li class="font-mono">B = 1</li>
+                <li class="font-mono">C = 2</li>
+                <li class="font-mono">D = 3</li>
+                <li class="font-mono">E = 4</li>
+                <li class="font-mono">F = 5</li>
+                <li class="font-mono">G = 6</li>
+            </ul>
+            <p class="explanation">This setup removes even more of our built-in number sense, forcing us to rely purely on the rules of the system.</p>
+            <a href="./base7.html" target="_blank" class="link">
+                See a base-7 ‘odometer’ to help think outside of base-10 &rarr;
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

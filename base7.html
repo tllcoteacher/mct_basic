@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base 7 Odometer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* --- Retro Terminal Theme --- */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+        html, body {
+            font-family: 'Fira Code', 'Courier New', monospace;
+            height: 100%;
+            background-color: #0a0a0a;
+        }
+        
+        .container-retro {
+            background-color: #111;
+            border: 2px solid #f59e0b; /* amber-500 */
+            border-radius: 0;
+            box-shadow: none;
+        }
+        
+        .digit-display {
+            font-weight: 700;
+            background-color: #000;
+            color: #f59e0b; /* amber-500 */
+            padding: 1rem 1.5rem;
+            border-radius: 0;
+            font-size: 5rem;
+            line-height: 1;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 8px #f59e0ba0;
+            border: 2px solid #f59e0b;
+            text-align: center;
+        }
+
+        .control-btn {
+            font-weight: 600;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0;
+            font-size: 1.125rem;
+            transition: all 0.2s ease-in-out;
+            color: #0a0a0a;
+            border: 2px solid transparent;
+            text-transform: uppercase;
+        }
+        
+        .control-btn:hover {
+            border-color: white;
+        }
+        
+        .control-btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body class="text-white flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-md">
+        <div class="container-retro p-6 sm:p-8">
+            
+            <h1 class="text-3xl font-bold text-center mb-2 text-amber-500 uppercase">Base-7 Visualizer</h1>
+            <p class="text-center text-gray-400 mb-6">EXEC: WATCH_NUMBERS.EXE -b 7</p>
+
+            <div class="flex justify-center mb-8">
+                <div id="odometer-display" class="digit-display">0000</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <button id="add-one" class="control-btn bg-amber-500 hover:bg-amber-400">
+                    +1
+                </button>
+                <button id="add-seven" class="control-btn bg-amber-500 hover:bg-amber-400">
+                    +10
+                </button>
+                <button id="decrease-one" class="control-btn bg-gray-400 hover:bg-white">
+                    -1
+                </button>
+                <button id="decrease-seven" class="control-btn bg-gray-400 hover:bg-white">
+                    -10
+                </button>
+            </div>
+
+            <div class="text-center mt-6">
+                 <button id="reset" class="text-gray-500 hover:text-red-500 text-sm font-medium transition-colors uppercase">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const display = document.getElementById('odometer-display');
+            const addOneBtn = document.getElementById('add-one');
+            const addSevenBtn = document.getElementById('add-seven');
+            const decreaseOneBtn = document.getElementById('decrease-one');
+            const decreaseSevenBtn = document.getElementById('decrease-seven');
+            const resetBtn = document.getElementById('reset');
+            let currentValueInBase10 = 0;
+            const displayDigits = 4;
+            function updateDisplay() {
+                let base7String = currentValueInBase10.toString(7);
+                let paddedString = base7String.padStart(displayDigits, '0');
+                display.textContent = paddedString;
+            }
+            addOneBtn.addEventListener('click', () => {
+                currentValueInBase10++;
+                updateDisplay();
+            });
+            addSevenBtn.addEventListener('click', () => {
+                currentValueInBase10 += 7;
+                updateDisplay();
+            });
+            decreaseOneBtn.addEventListener('click', () => {
+                if (currentValueInBase10 > 0) {
+                    currentValueInBase10--;
+                    updateDisplay();
+                }
+            });
+            decreaseSevenBtn.addEventListener('click', () => {
+                currentValueInBase10 -= 7;
+                if (currentValueInBase10 < 0) {
+                    currentValueInBase10 = 0;
+                }
+                updateDisplay();
+            });
+            resetBtn.addEventListener('click', () => {
+                currentValueInBase10 = 0;
+                updateDisplay();
+            });
+            updateDisplay();
+        });
+    </script>
+</body>
+</html>
